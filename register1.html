@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form>span{
+            color: red;
+            font-weight: bold;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background: url(register.jpg);
+            width: 100%;
+            height: 100%;
+        }
+
+        #submit{
+            width: 100px;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: brown;
+            height: 40px;
+            font-size: medium;
+        }
+
+        #reset{
+            width: 100px;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: brown;
+            height: 40px;
+            font-size: medium;
+        }
+
+        div.main{
+            width: 400px;
+            margin: 100px auto 0px auto;
+        
+        }
+
+        h2{
+            text-align: start;
+            padding: 20px;
+            font-family: sans-serif;
+            color: aliceblue;
+        }
+
+        div.register{
+            background-color: rgba(0,0,0, 0.3);
+            width: 100%;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="register">    
+    <form action="Success.html" onsubmit="return validateForm()"   novalidate>
+    <h2>REGISTER HERE</h2>
+    <label>Enter First Name:</label> 
+    <input id="fname" name="myname"  onblur="validate1()" required><br>
+    <span id="error1"></span><br><br>
+    <label>Enter Middle Name:</label> 
+    <input type="text" id="mname" name="myname" onblur="validate2()"><br>
+    <span id="error2"></span><br><br>
+    <label>Enter Last Name:</label> 
+    <input type="text" id="lname" name="myname"  onblur="validate3()" required><br>
+    <span id="error3"></span><br><br>
+    <label>Enter Email Id:</label>
+    <input type="email" id="emailid" name="emailid"  onblur="validate4()"   required><br>
+    <span id="error4"></span><br><br>
+    <label>Enter your age:</label>
+    <input type="number"  id="age" min="0" max="110" onblur="validate5()" required><br>
+    <span id="error5"></span><br><br>
+    <label>Enter Mobile Number:</label>
+    <input type="tel"  id="mobile" pattern="[0-9]{10}" onblur="validate6()" required><br>
+    <span id="error6"></span><br><br>
+    <label>Set User Name:</label> 
+    <input type="text" id="uname" minlength="6" maxlength="12"  onblur="validate7()" required><br>
+    <span id="error7"></span><br><br>
+    <label>Set Password:</label> 
+    <input type="text" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}" onblur="validate8()"  required><br>
+    <span id="error8"></span><br><br>
+    <label>Confirm Password:</label> 
+    <input type="text" id="c_pass" onblur="validate9()" required><br>
+    <span id="error9"></span><br><br>
+    <input type="submit" value="REGISTER" id="submit">
+    <input type="reset" id="reset">
+    </form>
+    <script src="Scripts/Validation.js"></script>
+</div>
+</div>
+</body>
+</html>
